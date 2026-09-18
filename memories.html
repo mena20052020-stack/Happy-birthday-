@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Memories</title>
+    <style>
+        .gallery-container {
+            width: 90%;
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 16px;
+            background-color: #d6336e;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            z-index: 10;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #e4e6eb;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        body {
+            background-color: #b6003df6;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="gallery-container">
+         <div class="photo-grid">
+            <div class="gallery-item"><img src="IMG_٢٠٢٢٠٧٢٦_٠١١٠٠٤.jpg" alt="Memory 1"></div>
+            <div class="gallery-item"><img src="IMG_٢٠٢٢٠٧٢٦_٠١١٣٠٣.jpg" alt="Memory 2"></div>
+            <div class="gallery-item"><img src="IMG_٢٠٢٢٠٧٢٦_٠١١٦٣٨.jpg" alt="Memory 3"></div>
+            <div class="gallery-item"><img src="IMG_٢٠٢٢٠٧٢٦_٠١٢٦٣٢.jpg" alt="Memory 4"></div>
+            <div class="gallery-item"><img src="IMG-20220725-WA0000.jpg" alt="Memory 5"></div>
+            <div class="gallery-item"><img src="20251203_175018_٠٠٠٠.png" alt="Memory 6"></div>
+            
+            
+            
+        </div>
+        <video controls autoplay muted loop>
+            <source src="c:\Users\Mina\Desktop\اول تجربه HTML\lv_0_٢٠٢٣٠٨٢٤٠٠٣٨٠٠.mp4" type="video/mp4">
+        </video>
+    </section>
+<style>
+  .floating-cake {
+    position: fixed;
+    bottom: -60px;
+    font-size: 35px;
+    z-index: 0;
+    pointer-events: none;
+    animation: flyUp linear infinite;
+  }
+
+  @keyframes flyUp {
+    0% {
+      transform: translateY(0);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(-110vh);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function createCake() {
+    const cake = document.createElement("div");
+    cake.innerHTML = "🎂";
+    cake.classList.add("floating-cake");
+    cake.style.left = Math.random() * 95 + "vw";
+    const duration = Math.random() * 4 + 4; 
+    cake.style.animationDuration = duration + "s";
+    document.body.appendChild(cake);
+    setTimeout(() => {
+      cake.remove();
+    }, duration * 1000);
+  }
+  setInterval(createCake, 600);
+</script>
+</body>
+</html>

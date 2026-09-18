@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head><title>Happy Birthday</title> <style>body{background-image: url('20251203_175018_٠٠٠٠.png'  IMG_);background-size: cover; background-repeat: no-repeat;}</style>
+    </head>
+<body>
+    <H1>Happy Birthday</H1> 
+    <button id="tap-btn">Tap Me!</button>
+    <input id="password-input" type="password" placeholder="Enter your password" style="display: none;">
+    <button id="enter-btn" style="display: none;">Enter</button>
+   
+</body>
+<script>
+ document.getElementById('tap-btn').addEventListener('click', function() { document.getElementById('password-input').style.display = 'block'; document.getElementById('enter-btn').style.display = 'block'; });
+document.getElementById('enter-btn').addEventListener('click', function() { var password = document.getElementById('password-input').value; if (password === '123456789') { window.location.href = 'memories.html'; } else { alert('Wrong password'); } });
+</script>
+ <style>body{display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        height:100vh;}
+    </style>
